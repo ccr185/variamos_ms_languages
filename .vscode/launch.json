@@ -7,11 +7,27 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Launch Program with Kubernetes",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/Domain/Init/StartServiceUseCases.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "preLaunchTask": "bridge-to-kubernetes.resource",
+            "env": {
+                "GRPC_DNS_RESOLVER": "native"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Program",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\dist\\Domain\\Init\\StartServiceUseCases.js",
+            "program": "${workspaceFolder}/dist/Domain/Init/StartServiceUseCases.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]

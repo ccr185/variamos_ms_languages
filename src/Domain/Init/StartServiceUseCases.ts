@@ -22,7 +22,7 @@ async function init() {
 
   await app.listen(4000);
   console.log("Server on port", 4000);
-  console.log("this is the new version");
+  console.log("this is the new version v2");
 }
 
 init();
